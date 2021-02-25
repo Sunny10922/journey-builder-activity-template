@@ -3,7 +3,7 @@ define([
 ], function (
     Postmonger
 ) {
-    'use strict';
+    'use strict'; 
 
     var connection = new Postmonger.Session();
     var authTokens = {};
