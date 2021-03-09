@@ -47,13 +47,7 @@ define([
                 console.log('--inArgument--');
                 console.log(inArgument);
                 alert('--Hi--');
-                alert(inArgument);
-
-                var popup = require('popups');
-
-                popup.alert({
-                    content: 'Hello!'
-                });
+                alert(inArgument.campaignName);
             });
         });
         
