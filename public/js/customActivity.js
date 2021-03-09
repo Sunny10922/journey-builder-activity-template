@@ -53,7 +53,7 @@ define([
                 var defCamValue = $('#campaign_name').val();
                 console.log('--Default Campiagn Value:'+defCamValue);
 
-                $('#campaign_name').val = inArgument.campaignName;
+                $('#campaign_name').val(inArgument.campaignName);
                 var newCamValue = $('#campaign_name').val();
                 console.log('--New Campiagn Value:'+newCamValue);
             });
