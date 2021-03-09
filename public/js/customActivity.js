@@ -47,6 +47,8 @@ define([
                 console.log('--inArgument--');
                 console.log(inArgument);
                 alert('Campaign Name: '+inArgument.campaignName);
+                var defCamValue = $('#campaign_name').val();
+                console.log('--Default Campiagn Value:'+defCamValue);
             });
         });
         
