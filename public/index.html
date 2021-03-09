@@ -47,17 +47,38 @@
                 <h2>Campaign Data:</h2>
             </main>
 
-            <form action="/action_page.php">
+            <form id="myForm" method="post">
                 
                 <label for="campaign_name">Campaign Name:</label><br>
-                <input disabled type="text" id="campaign_name" name="campaign_name" value="Default Campaign Name"><br>
+                <input disabled type="text" id="campaign_name" name="campaign_name" value=""><br>
                 
-                <label for="campaign_new_name">New Campaign Name:</label><br>
-                <input type="text" id="campaign_new_name" name="campaign_new_name" value=""><br><br>
+                <label for="campaign_new_name">Please provide new campaign name:</label><br>
+                <input type="text" id="campaign_new_name" name="campaign_new_name" value=""><br>
                 
-                <input type="submit" value="Submit">
+                <label for="campaign_final_name">New Campaign Name:</label><br>
+                <output type="text" id="campaign_final_name" name="campaign_final_name" value=""><br><br>
+                
+                <input type="submit" value="Update">
             </form>
-
+            <script>
+                $(document).ready(function(){
+                    $("#myForm").submit(function(event){
+                        event.preventDefault();
+                        var num1 = $('#campaign_name').val();
+                        var num2 = $('#campaign_new_name').val();
+                        $.ajax({
+                            method: 'post',
+                            url: '/data',
+                            data: JSON.stringify({ num1: num1, num2: num2 }),
+                            contentType: 'application/json',
+                            success: function(data) {
+                                $('#campaign_final_name').val(data);
+                            }
+            
+                        })
+                    });
+                });
+            </script>
         </div>
 
     </div>
