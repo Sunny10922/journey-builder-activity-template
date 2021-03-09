@@ -46,8 +46,7 @@ define([
             $.each(inArgument, function (key, val) {
                 console.log('--inArgument--');
                 console.log(inArgument);
-                alert('--Hi--');
-                alert(inArgument.campaignName);
+                alert('Campaign Name: '+inArgument.campaignName);
             });
         });
         
