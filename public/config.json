@@ -15,12 +15,12 @@
     "execute": {
       "inArguments": [
         {
-          "emailAddress": "{{Contact.Attribute.Campaigns.CampaignName}}"
+          "campaignName": "My Test Campaign"
         }
       ],
       "outArguments": [
         {
-        "emailSupressed": "No"
+        "newCampaignNameAvailable": "No"
         }
       ],
       "timeout": 100000,
@@ -67,7 +67,7 @@
       "execute": {
         "inArguments": [
           {
-            "emailAddress": {
+            "campaignName": {
               "dataType": "text",
               "isNullable": true,
               "direction": "in"
@@ -76,7 +76,7 @@
         ],
         "outArguments": [
           {
-            "emailSupressed": {
+            "newCampaignNameAvailable": {
               "dataType": "text",
               "isNullable": true,
               "direction": "in"
