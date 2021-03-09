@@ -46,8 +46,18 @@ define([
             $.each(inArgument, function (key, val) {
                 console.log('--inArgument--');
                 console.log(inArgument);
+                alert('--Hi--');
+                alert(inArgument);
+
+                var popup = require('popups');
+
+                popup.alert({
+                    content: 'Hello!'
+                });
             });
         });
+        
+        
 
         connection.trigger('updateButton', {
             button: 'next',
