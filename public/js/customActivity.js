@@ -18,34 +18,8 @@ define([
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-
-        var express = require('express');
-        var path = require('path');
-        var bodyParser = require('body-parser');
-        var app = express();
-
-        app.set('port', process.env.PORT || 8080);
-
-        app.use(bodyParser.urlencoded({extended: true}));
-        app.use(bodyParser.json());
-        app.use(express.static(path.join(__dirname, '../static')));
-
-        app.get('/', function(req, res){
-        res.redirect('/public');
-        });
-
-        app.post('/add', function(req, res){
-            var a = req.body.numa;
-            var b = req.body.numb;
-            res.send(b);
-        });
-
-        var server = app.listen(app.get('port'), function(){
-            var port = server.address().port;
-        });
 
     }
 
@@ -77,13 +51,11 @@ define([
             });
         });
         
-        
-
-        connection.trigger('updateButton', {
+        /*connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
             visible: true
-        });
+        });*/
 
 
     }
@@ -99,7 +71,7 @@ define([
         console.log(endpoints);
     }
 
-    function save() {
+    /*function save() {
         console.log('--Inside Save--');
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
@@ -117,6 +89,6 @@ define([
         console.log(payload);
 
         connection.trigger('updateActivity', payload);
-    }
+    }*/
 
 });
