@@ -15,7 +15,7 @@
     "execute": {
       "inArguments": [
         {
-          "campaignName": "{{Contact.Attribute.TestSunnyDE.email_id}}"
+          "campaignName": "Test Campaign"
         }
       ],
       "outArguments": [],
@@ -54,7 +54,7 @@
         "inArguments": [
           {
             "campaignName": {
-              "dataType": "EmailAddress",
+              "dataType": "Text",
               "isNullable": false,
               "direction": "in"
             }
