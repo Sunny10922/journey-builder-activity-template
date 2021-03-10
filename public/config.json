@@ -15,7 +15,7 @@
     "execute": {
       "inArguments": [
         {
-          "campaignName": "Test Campaign"
+          "campaignName": "{{Contact.Attribute.TestSunnyDE.theid}}"
         }
       ],
       "outArguments": [],
