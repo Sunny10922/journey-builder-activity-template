@@ -51,11 +51,11 @@ define([
             });
         });
         
-        /*connection.trigger('updateButton', {
+        connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
             visible: true
-        });*/
+        });
 
 
     }
@@ -71,17 +71,19 @@ define([
         console.log(endpoints);
     }
 
-    /*function save() {
+    function save() {
         console.log('--Inside Save--');
+        
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
-        payload.name = name;
+        
+        //payload.name = name;
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "emailAddress": "sunny.bansal@customactivity.com"
+            "campaignName": "Test New Campaign"
         }];
 
         payload['metaData'].isConfigured = true;
@@ -89,6 +91,6 @@ define([
         console.log(payload);
 
         connection.trigger('updateActivity', payload);
-    }*/
+    }
 
 });
