@@ -15,7 +15,7 @@
     "execute": {
       "inArguments": [
         {
-          "campaignName": "sunny.bansal@ibm.com"
+          "campaignName": "{{Contact.Attribute.TestSunnyDE.email_id}}"
         }
       ],
       "outArguments": [],
