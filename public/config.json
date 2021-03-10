@@ -68,9 +68,8 @@
         "inArguments": [
           {
             "campaignName": {
-              "dataType": "text",
-              "isNullable": true,
-              "direction": "in"
+              "dataType": "EmailAddress",
+              "isNullable": false
             }
           }
         ],
