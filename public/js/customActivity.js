@@ -15,7 +15,7 @@ define([
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
     connection.on('clickedNext', save);
-    
+
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
@@ -25,7 +25,7 @@ define([
     }
 
     function initialize(data) {
-        console.log('--Inside iitialize');
+        console.log('--Inside initialize');
         console.log(data);
         if (data) {
             payload = data;
@@ -82,9 +82,13 @@ define([
         
         //payload.name = name;
 
+        
+        var newCampaignName = $('#campaign_new_name').val();
+        $('#campaign_final_name').val(newCampaignName);
+
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "campaignName": "Test New Campaign"
+            "campaignName": newCampaignName
         }];
 
         payload['metaData'].isConfigured = true;
