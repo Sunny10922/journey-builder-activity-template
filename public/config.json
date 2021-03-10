@@ -40,12 +40,6 @@
       "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/validate"
     }
   },
-  "wizardSteps": [
-    {
-      "label": "Configure Activity",
-      "key": "step1"
-    }
-  ],
   "userInterfaces": {
     "configModal": {
       "height": 400,
