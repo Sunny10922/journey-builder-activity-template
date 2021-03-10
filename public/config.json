@@ -27,6 +27,7 @@
     }
   },
   "configurationArguments": {
+    "applicationExtensionKey": "8b18b5c9-f4a3-45d2-9cb4-c212fbb1fa8c",
     "save": {
       "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/save"
     },
