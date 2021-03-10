@@ -27,22 +27,17 @@
     }
   },
   "configurationArguments": {
-    "applicationExtensionKey": "__application_key_from_appcenter_here__",
     "save": {
-      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/save",
-      "verb": "POST"
+      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/save"
     },
     "publish": {
-      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/publish",
-      "verb": "POST"
+      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/publish"
     },
     "stop": {
-      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/stop",
-      "verb": "POST"
+      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/stop"
     },
     "validate": {
-      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/validate",
-      "verb": "POST"
+      "url": "https://journey-builder-activity-sunny.herokuapp.com/journeybuilder/validate"
     }
   },
   "wizardSteps": [
@@ -65,7 +60,8 @@
           {
             "campaignName": {
               "dataType": "EmailAddress",
-              "isNullable": false
+              "isNullable": false,
+              "direction": "in"
             }
           }
         ],
