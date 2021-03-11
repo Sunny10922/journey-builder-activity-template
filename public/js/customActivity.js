@@ -81,14 +81,14 @@ define([
         var lastName = $('#last_name').val();
         var voucherCode = firstName + '' + lastName + '12345';
 
-        payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens,
+        payload['arguments'].execute.outArguments = [{
             "voucher_code": voucherCode
         }];
 
         payload['metaData'].isConfigured = true;
 
         console.log(payload);
+        console.log(payload['arguments'].execute.outArguments);
 
         connection.trigger('updateActivity', payload);
     }
