@@ -94,9 +94,10 @@ define([
         payload['arguments'].execute.outArguments = [{
             "voucher_code": voucherCode
         }];
+        var outArgumentsUpdated = payload['arguments'].execute.outArguments;
 
-        $.each(outArguments, function (index, outArgument) {
-            $.each(outArgument, function (key, val) {
+        $.each(outArgumentsUpdated, function (index, outArgumentUpdated) {
+            $.each(outArgumentUpdated, function (key, val) {
                 console.log('--After Update--');
                 console.log(key);
                 console.log(val);
