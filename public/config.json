@@ -13,12 +13,19 @@
   },
   "arguments": {
     "execute": {
-      "inArguments": [
-        {
-          "campaignName": "{{Contact.Attribute.TestSunnyDE.theid}}"
-        }
-      ],
-      "outArguments": [],
+      "inArguments": [{
+          "unique_key":  "{{Contact.Attribute.TestSunnyDE.unique_key}}",
+          "email_id":    "{{Contact.Attribute.TestSunnyDE.email_id}}",
+          "first_name":  "{{Contact.Attribute.TestSunnyDE.first_name}}",
+          "last_name":   "{{Contact.Attribute.TestSunnyDE.last_name}}",
+          "age":         "{{Contact.Attribute.TestSunnyDE.age}}",
+          "birth_date":  "{{Contact.Attribute.TestSunnyDE.birth_date}}",
+          "phone_number":"{{Contact.Attribute.TestSunnyDE.phone_number}}",
+          "is_married":  "{{Contact.Attribute.TestSunnyDE.is_married}}"
+      }],
+      "outArguments": [{
+        "voucher_code":"Test Voucher Code"
+      }],
       "timeout": 100000,
       "retryCount": 1,
       "retryDelay": 10000,
@@ -53,14 +60,71 @@
       "execute": {
         "inArguments": [
           {
-            "campaignName": {
+            "unique_key": {
               "dataType": "Text",
               "isNullable": false,
               "direction": "in"
             }
+          },
+          {
+            "email_id": {
+              "dataType": "Email",
+              "isNullable": false,
+              "direction": "in"
+            }
+          },
+          {
+            "first_name": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "in"
+            }
+          },
+          {
+            "last_name": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "in"
+            }
+          },
+          {
+            "age": {
+              "dataType": "Number",
+              "isNullable": true,
+              "direction": "in"
+            }
+          },
+          {
+            "birth_date": {
+              "dataType": "Date",
+              "isNullable": true,
+              "direction": "in"
+            }
+          },
+          {
+            "phone_number": {
+              "dataType": "Phone",
+              "isNullable": true,
+              "direction": "in"
+            }
+          },
+          {
+            "is_married": {
+              "dataType": "Boolean",
+              "isNullable": true,
+              "direction": "in"
+            }
           }
         ],
-        "outArguments": []
+        "outArguments": [
+          {
+            "voucher_code": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "in"
+            }
+          }
+        ]
       }
     }
   }

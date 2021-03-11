@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
-        crossorigin="anonymous"></script>
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -20,15 +19,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js">
     </script>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-        rel="stylesheet"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.css" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.css" />
+
     <script src="js/postmonger.js"></script>
+
     <script type="text/javascript" src="js/require.js"></script>
     <script type="text/javascript">
         (function () {
@@ -43,6 +40,82 @@
             require(config, dependencies);
         })();
     </script>
+
+    <style>
+        table {
+            width: 50%;
+            max-height: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-y: auto;
+            overflow-x: auto;
+
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #ddd;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        button {
+            background-color: #e20074;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        #t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        #t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        #t01 th {
+            background-color: black;
+            color: white;
+        }
+
+        #thead {
+            position: fixed;
+            width: 50%;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -57,17 +130,48 @@
             </main>
 
             <form id="myForm" method="post">
-                
+
                 <label for="campaign_name">Campaign Name:</label><br>
-                <input disabled type="text" id="campaign_name" name="campaign_name" value=""><br>
-                
-                <label for="campaign_new_name">Please provide new campaign name:</label><br>
-                <input type="text" id="campaign_new_name" name="campaign_new_name" value=""><br>
-                
-                <label for="campaign_final_name">New Campaign Name:</label><br>
-                <output type="text" id="campaign_final_name" name="campaign_final_name" value=""><br><br>
-                
-                <input type="submit" value="Update">
+                <br>
+
+                <table id="t01">
+                    <tr>
+                        <thead>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email Address</th>
+                            <th>Phone Number</th>
+                            <th>Age</th>
+                            <th>Date of Birth</th>
+                            <th>Is Married?</th>
+                        </thead>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="first_name" name="first_name" value="">
+                        </td>
+                        <td>
+                            <input type="text" id="last_name" name="last_name" value="">
+                        </td>
+                        <td>
+                            <input type="email" id="email_id" name="email_id" value="">
+                        </td>
+                        <td>
+                            <input type="number" id="phone_number" name="phone_number" value="">
+                        </td>
+                        <td>
+                            <input type="number" id="age" name="age" value="">
+                        </td>
+                        <td>
+                            <input type="date" id="birth_date" name="birth_date" value="">
+                        </td>
+                        <td>
+                            <input type="checkbox" id="is_married" name="is_married" value="">
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="submit" value="Get Voucher Code">
             </form>
             <!--script>
                 $(document).ready(function(){

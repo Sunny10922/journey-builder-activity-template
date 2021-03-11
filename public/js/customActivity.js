@@ -48,7 +48,7 @@ define([
                 console.log('--inArgument--');
                 console.log(inArgument);
                 
-                $('#campaign_name').val(inArgument.campaignName);
+                $('#campaign_name').val(inArgument.campaignName);   
             });
         });
         
