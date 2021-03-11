@@ -43,9 +43,10 @@ define([
         console.log(inArguments);
 
         $.each(inArguments, function (index, inArgument) {
+            console.log('--Inside First Loop');
             $.each(inArgument, function (key, val) {
                 
-                console.log('--inArgument--');
+                console.log('--Inside Second Loop -- InArgument::');
                 console.log(inArgument);
                 
                 $('#first_name').val(inArgument.first_name); 
