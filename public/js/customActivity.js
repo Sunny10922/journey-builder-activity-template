@@ -48,14 +48,10 @@ define([
                 
                 console.log('--Inside Second Loop -- InArgument::');
                 console.log(inArgument);
+                console.log(key);
+                console.log(val);
                 
-                $('#first_name').val(inArgument.first_name); 
-                $('#last_name').val(inArgument.last_name);
-                $('#email_id').val(inArgument.email_id);
-                $('#phone_number').val(inArgument.phone_number);
-                $('#age').val(inArgument.age);
-                $('#birth_date').val(inArgument.birth_date);
-                $('#is_married').val(inArgument.is_married);  
+                $('#'+key).val(val); 
             });
         });
         
