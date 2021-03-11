@@ -40,17 +40,8 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log(inArguments);
-
         $.each(inArguments, function (index, inArgument) {
-            console.log('--Inside First Loop');
             $.each(inArgument, function (key, val) {
-                
-                console.log('--Inside Second Loop -- InArgument::');
-                console.log(inArgument);
-                console.log(key);
-                console.log(val);
-                
                 $('#'+key).val(val); 
             });
         });
