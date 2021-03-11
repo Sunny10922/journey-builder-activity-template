@@ -41,6 +41,14 @@
         })();
     </script>
 
+    <script type="text/javascript">
+        function connecttoMC() {
+            $.get("/connecttoMC", function (data) {
+                console.log(data);
+            });
+        }
+    </script>
+
     <style>
         table {
             width: 40%;
@@ -139,11 +147,11 @@
                                         <input id="is_married" name="is_married" type="checkbox" value="" required>
                                     </td>
                                 </tr>
-                                <!--tr>
+                                <tr>
                                     <td colspan="2" style="padding-left: 20%;">
-                                        <input type="submit" value="Get Voucher Code">
+                                        <input type="submit" onclick="connecttoMC();" value="Get Voucher Code">
                                     </td>
-                                </tr-->
+                                </tr>
                             </table>
                         </form>
                     </div>
