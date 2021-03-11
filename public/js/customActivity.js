@@ -39,7 +39,6 @@ define([
         );
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
-
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
                 $('#'+key).val(val); 
@@ -51,8 +50,6 @@ define([
             text: 'done',
             visible: true
         });
-
-
     }
 
     function onGetTokens(tokens) {
@@ -67,46 +64,17 @@ define([
     }
 
     function save() {
-        console.log('--Inside Save--');
-        
-        // 'payload' is initialized on 'initActivity' above.
-        // Journey Builder sends an initial payload with defaults
-        // set by this activity's config.json file.  Any property
-        // may be overridden as desired.
-        
-        //payload.name = name;
-
         
         var firstName = $('#first_name').val();
         var lastName = $('#last_name').val();
         var voucherCode = firstName + '' + lastName + '12345';
 
-        var outArguments = payload['arguments'].execute.outArguments;
-
-        $.each(outArguments, function (index, outArgument) {
-            $.each(outArgument, function (key, val) {
-                console.log('--AfBeforeter Update--');
-                console.log(key);
-                console.log(val);
-            });
-        });
-
         payload['arguments'].execute.outArguments = [{
             "voucher_code": voucherCode
         }];
-        var outArgumentsUpdated = payload['arguments'].execute.outArguments;
-
-        $.each(outArgumentsUpdated, function (index, outArgumentUpdated) {
-            $.each(outArgumentUpdated, function (key, val) {
-                console.log('--After Update--');
-                console.log(key);
-                console.log(val);
-            });
-        });
+        
         payload['metaData'].isConfigured = true;
-
         console.log(payload);
-
         connection.trigger('updateActivity', payload);
     }
 
