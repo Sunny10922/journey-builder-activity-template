@@ -93,3 +93,29 @@ require('dotenv').load();
 app.get('/', function (request, response) {
 	response.send('Hello World!')
 })
+
+app.get('/connecttoMC', function (request, responsefromWeb) {
+	console.log(process.env.CLIENT_ID);
+	var conData = {
+		'grant_type': 'client_credentials',
+		'client_id': process.env.CLIENT_ID,
+		'client_secret': process.env.CLIENT_SECRET
+	}
+	axios({
+		method: 'post',
+		url: 'https://mctg9llgcpl0dff718-t9898wqh1.auth.marketingcloudapis.com/v2/token',
+		data: conData,
+		headers: {
+			'Content-Type': 'application/json',
+		}
+	})
+		.then(function (response) {
+			token = response.data.access_token;
+			console.log(token);
+			responsefromWeb.send('Authorization Sent');
+
+		}).catch(function (error) {
+			console.log(error);
+			responsefromWeb.send(error);
+		});
+})
