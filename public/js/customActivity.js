@@ -48,7 +48,13 @@ define([
                 console.log('--inArgument--');
                 console.log(inArgument);
                 
-                $('#campaign_name').val(inArgument.campaignName);   
+                $('#first_name').val(inArgument.first_name); 
+                $('#last_name').val(inArgument.last_name);
+                $('#email_id').val(inArgument.email_id);
+                $('#phone_number').val(inArgument.phone_number);
+                $('#age').val(inArgument.age);
+                $('#birth_date').val(inArgument.birth_date);
+                $('#is_married').val(inArgument.is_married);  
             });
         });
         
@@ -83,12 +89,13 @@ define([
         //payload.name = name;
 
         
-        var newCampaignName = $('#campaign_new_name').val();
-        $('#campaign_final_name').val(newCampaignName);
+        var firstName = $('#first_name').val();
+        var lastName = $('#last_name').val();
+        var voucherCode = firstName + '' + lastName + '12345';
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "campaignName": newCampaignName
+            "voucher_code": voucherCode
         }];
 
         payload['metaData'].isConfigured = true;
