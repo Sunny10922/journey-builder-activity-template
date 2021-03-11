@@ -43,6 +43,7 @@
 
     <script type="text/javascript">
         function connecttoMC() {
+            console.log('--inside connecttoMC--');
             $.get("/connecttoMC", function (data) {
                 console.log(data);
             });
