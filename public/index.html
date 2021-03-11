@@ -43,30 +43,30 @@
 
     <style>
         table {
-            width: 50%;
-            max-height: 350px;
-            margin-left: auto;
-            margin-right: auto;
-            overflow-y: auto;
-            overflow-x: auto;
-
-            border-collapse: collapse;
-            border-spacing: 0;
-            border: 1px solid #ddd;
+            width:40%;
+            margin-left: 30px;
         }
-
-        table,
-        th,
         td {
-            border: 1px solid black;
-            border-collapse: collapse;
+            padding: 5px;
+            text-align: left;
+            font-size: 15px
         }
-
-        button {
+    
+        .header {
+            padding: 1px 16px;
+            background: white;
+        }
+    
+        img {
+            margin: 12px;
+            float: left;
+        }
+    
+        input[type=submit] {
             background-color: #e20074;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 9px 12px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -75,50 +75,11 @@
             cursor: pointer;
             font-weight: 700;
         }
-
-        th,
-        td {
-            padding: 15px;
-            text-align: left;
-        }
-
-        #t01 tr:nth-child(even) {
-            background-color: #eee;
-        }
-
-        #t01 tr:nth-child(odd) {
-            background-color: #fff;
-        }
-
-        #t01 th {
-            background-color: black;
-            color: white;
-        }
-
-        #thead {
-            position: fixed;
-            width: 50%;
-        }
-
-        .closebtn {
-            margin-left: 15px;
-            color: white;
-            font-weight: bold;
-            float: right;
-            font-size: 22px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .closebtn:hover {
-            color: black;
-        }
     </style>
 
 </head>
 
-<body>
+<body style="background-color:#F8f8f8;">
     <div id="step1" class="step">
         <div class="slds-grid">
 
@@ -131,47 +92,62 @@
 
             <form id="myForm" method="post">
 
-                <label for="campaign_name">Campaign Name:</label><br>
-                <br>
+                <center>
+                    <div>
+                        <form action="" method="POST">
+                            <table>
+                                <tr>
+                                    <td>First Name</td>
+                                    <td>
+                                        <input id="first_name" name="first_name" type="text" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Last Name</td>
+                                    <td>
+                                        <input id="last_name" name="last_name" type="text" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email Address</td>
+                                    <td>
+                                        <input id="email_id" name="email_id" type="email" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number</td>
+                                    <td>
+                                    <input id="phone_number" name="phone_number" type="number" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td>
+                                    <input id="age" name="age" type="number" value="" min="1" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Birth</td>
+                                    <td>
+                                    <input id="birth_date" name="birth_date" type="date" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Is Married?</td>
+                                    <td>
+                                    <input id="is_married" name="is_married" type="checkbox" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-left: 20%;">
+                                        <input type="submit" value="Get Voucher Code">
+                                    </td>
+                                </tr>
+                            </table>  
+                        </form>
+                    </div>
+                </center>
 
-                <table id="t01">
-                    <tr>
-                        <thead>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email Address</th>
-                            <th>Phone Number</th>
-                            <th>Age</th>
-                            <th>Date of Birth</th>
-                            <th>Is Married?</th>
-                        </thead>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" id="first_name" name="first_name" value="">
-                        </td>
-                        <td>
-                            <input type="text" id="last_name" name="last_name" value="">
-                        </td>
-                        <td>
-                            <input type="email" id="email_id" name="email_id" value="">
-                        </td>
-                        <td>
-                            <input type="number" id="phone_number" name="phone_number" value="">
-                        </td>
-                        <td>
-                            <input type="number" id="age" name="age" value="">
-                        </td>
-                        <td>
-                            <input type="date" id="birth_date" name="birth_date" value="">
-                        </td>
-                        <td>
-                            <input type="checkbox" id="is_married" name="is_married" value="">
-                        </td>
-                    </tr>
-                </table>
-
-                <input type="submit" value="Get Voucher Code">
             </form>
             <!--script>
                 $(document).ready(function(){
