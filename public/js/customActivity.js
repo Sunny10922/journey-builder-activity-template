@@ -1,3 +1,17 @@
+var express = require('express')
+var app = express()
+const axios = require('axios');
+const CircularJSON = require('circular-json');
+var token = '';
+var weatherData = [];
+
+app.set('port', (process.env.PORT || 5000))
+app.use(express.static(__dirname + '/public'))
+require('dotenv').load();
+app.get('/', function (request, response) {
+	response.send('Hello World!')
+})
+
 define([
     'postmonger'
 ], function (
