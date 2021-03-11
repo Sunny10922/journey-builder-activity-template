@@ -18,9 +18,9 @@
           "email_id":    "sunny.bansal@ibm.com",
           "first_name":  "Sunny",
           "last_name":   "Bansal",
-          "age":         "28",
+          "age":         28,
           "birth_date":  "10/06/1992",
-          "phone_number":"9999614829",
+          "phone_number":9999614829,
           "is_married":  "true"
       }],
       "outArguments": [{
