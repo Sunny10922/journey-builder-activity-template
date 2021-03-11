@@ -19,9 +19,9 @@
           "first_name":  "Sunny",
           "last_name":   "Bansal",
           "age":         28,
-          "birth_date":  "10/06/1992",
+          "birth_date":  "10-06-1992",
           "phone_number":9999614829,
-          "is_married":  "true"
+          "is_married":  true
       }],
       "outArguments": [{
         "voucher_code":"Test Voucher Code"
