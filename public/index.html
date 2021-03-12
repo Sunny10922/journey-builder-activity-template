@@ -41,15 +41,6 @@
         })();
     </script>
 
-    <script type="text/javascript">
-        function connecttoMC() {
-            console.log('--inside connecttoMC--');
-            $.get("/connecttoMC", function (data) {
-                console.log(data);
-            });
-        }
-    </script>
-
     <style>
         table {
             width: 40%;
@@ -147,31 +138,12 @@
                         </tr>
                         <tr>
                             <td colspan="2" style="padding-left: 20%;">
-                                <input type="submit" onclick="connecttoMC();" value="Get Voucher Code">
+                                <input type="submit" value="Get Voucher Code">
                             </td>
                         </tr>
                     </table>
                 </div>
             </center>
-            <!--script>
-                $(document).ready(function(){
-                    $("#myForm").submit(function(event){
-                        event.preventDefault();
-                        var num1 = $('#campaign_name').val();
-                        var num2 = $('#campaign_new_name').val();
-                        $.ajax({
-                            method: 'post',
-                            url: '/data',
-                            data: JSON.stringify({ num1: num1, num2: num2 }),
-                            contentType: 'application/json',
-                            success: function(data) {
-                                $('#campaign_final_name').val(data);
-                            }
-            
-                        })
-                    });
-                });
-            </script-->
         </div>
 
     </div>
